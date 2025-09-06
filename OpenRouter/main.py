@@ -303,7 +303,7 @@ class OptimizedRAGSystem:
 def main():
     # Configuration
     config = RAGConfig(
-        openrouter_api_key="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",
+        openrouter_api_key=os.getenv('OPENROUTER_API_KEY'),
         model_name="microsoft/wizardlm-2-8x22b",  # or any other model from OpenRouter
         chunk_size=800,  # Optimized chunk size
         chunk_overlap=100,
